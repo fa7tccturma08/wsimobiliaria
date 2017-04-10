@@ -1,7 +1,8 @@
 package br.tcc.uni7.entidades;
 
-public class ValoresImovelEntidade {
+public class ValorImovelEntidade {
 	private Integer codigoValorImovel;
+	private Double valorImovel;
 	private Double valorIPTUImovel;
 	private Double valorAluguelImovel;
 
@@ -24,7 +25,7 @@ public class ValoresImovelEntidade {
 	 * @return the valorIPTUImovel
 	 */
 	public Double getValorIPTUImovel() {
-		return valorIPTUImovel;
+		return (Double) valorIPTUImovel;
 	}
 
 	/**
@@ -39,7 +40,7 @@ public class ValoresImovelEntidade {
 	 * @return the valorAluguelImovel
 	 */
 	public Double getValorAluguelImovel() {
-		return valorAluguelImovel;
+		return (Double) valorAluguelImovel;
 	}
 
 	/**
@@ -48,6 +49,21 @@ public class ValoresImovelEntidade {
 	 */
 	public void setValorAluguelImovel(Double valorAluguelImovel) {
 		this.valorAluguelImovel = valorAluguelImovel;
+	}
+
+	/**
+	 * @return the valorImovel
+	 */
+	public Double getValorImovel() {
+		return (Double) valorImovel;
+	}
+
+	/**
+	 * @param valorImovel
+	 *            the valorImovel to set
+	 */
+	public void setValorImovel(Double valorImovel) {
+		this.valorImovel = valorImovel;
 	}
 
 }

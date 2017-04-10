@@ -2,8 +2,9 @@ package br.tcc.uni7.entidades;
 
 public class ImovelEntidades {
 	private Integer codigoImovel;
-	private LogradouroEntidade logradouro;
-	private ValoresImovelEntidade valores;
+	private Integer codigoTipoImovel;
+	private Integer codigoLocalizacaoImovel;
+	private Integer codigoValorImovel;
 
 	/**
 	 * @return the codigoImovel
@@ -21,33 +22,48 @@ public class ImovelEntidades {
 	}
 
 	/**
-	 * @return the logradouro
+	 * @return the codigoTipoImovel
 	 */
-	public LogradouroEntidade getLogradouro() {
-		return logradouro;
+	public Integer getCodigoTipoImovel() {
+		return codigoTipoImovel;
 	}
 
 	/**
-	 * @param logradouro
-	 *            the logradouro to set
+	 * @param codigoTipoImovel
+	 *            the codigoTipoImovel to set
 	 */
-	public void setLogradouro(LogradouroEntidade logradouro) {
-		this.logradouro = logradouro;
+	public void setCodigoTipoImovel(Integer codigoTipoImovel) {
+		this.codigoTipoImovel = codigoTipoImovel;
 	}
 
 	/**
-	 * @return the valores
+	 * @return the codigoLocalizacaoImovel
 	 */
-	public ValoresImovelEntidade getValores() {
-		return valores;
+	public Integer getCodigoLocalizacaoImovel() {
+		return codigoLocalizacaoImovel;
 	}
 
 	/**
-	 * @param valores
-	 *            the valores to set
+	 * @param codigoLocalizacaoImovel
+	 *            the codigoLocalizacaoImovel to set
 	 */
-	public void setValores(ValoresImovelEntidade valores) {
-		this.valores = valores;
+	public void setCodigoLocalizacaoImovel(Integer codigoLocalizacaoImovel) {
+		this.codigoLocalizacaoImovel = codigoLocalizacaoImovel;
+	}
+
+	/**
+	 * @return the codigoValorImovel
+	 */
+	public Integer getCodigoValorImovel() {
+		return codigoValorImovel;
+	}
+
+	/**
+	 * @param codigoValorImovel
+	 *            the codigoValorImovel to set
+	 */
+	public void setCodigoValorImovel(Integer codigoValorImovel) {
+		this.codigoValorImovel = codigoValorImovel;
 	}
 
 }

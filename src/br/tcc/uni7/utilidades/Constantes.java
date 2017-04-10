@@ -13,6 +13,11 @@ public class Constantes {
 	private final static String SENHA_MYSQL = "root";
 
 	private final static String BD_MYSQL = "wsimobiliaria";
+	
+	private final static Integer TIPO_IMOVEL_CASA=1;
+	
+	private final static Integer TIPO_IMOVEL_APARTAMENTO=2;
+	
 
 	/**
 	 * @return the driverMysql
@@ -54,6 +59,20 @@ public class Constantes {
 	 */
 	public static String getBdMysql() {
 		return BD_MYSQL;
+	}
+
+	/**
+	 * @return the tipoImovelCasa
+	 */
+	public static Integer getTipoImovelCasa() {
+		return TIPO_IMOVEL_CASA;
+	}
+
+	/**
+	 * @return the tipoImovelApartamento
+	 */
+	public static Integer getTipoImovelApartamento() {
+		return TIPO_IMOVEL_APARTAMENTO;
 	}
 	
 	
