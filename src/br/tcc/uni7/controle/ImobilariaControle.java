@@ -89,7 +89,7 @@ public class ImobilariaControle {
 			} else if (imovelValido == false) {
 				throw new IllegalArgumentException("Valor informado inválido" + " " + codigoImovel);
 			}
-			return valorImovelAluguel;
+			return (Double)valorImovelAluguel;
 		} catch (Exception e) {
 			throw new IllegalArgumentException(e.getMessage());
 		}

@@ -1,0 +1,38 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ImobilariaControleService WSDL service -->
+
+  <service name="ImobilariaControle" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://controle.uni7.tcc.br"/>
+      <parameter name="wsdlServiceElement" value="ImobilariaControleService"/>
+      <parameter name="schemaQualified" value="http://controle.uni7.tcc.br"/>
+      <parameter name="wsdlServicePort" value="ImobilariaControle"/>
+      <parameter name="className" value="br.tcc.uni7.controle.ImobilariaControleSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="ImobilariaControle"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getValorIPTUImovel" qname="operNS:getValorIPTUImovel" xmlns:operNS="http://controle.uni7.tcc.br" returnQName="retNS:getValorIPTUImovelReturn" xmlns:retNS="http://controle.uni7.tcc.br" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:codigoImovel" xmlns:pns="http://controle.uni7.tcc.br" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getLocalizacaoImovel" qname="operNS:getLocalizacaoImovel" xmlns:operNS="http://controle.uni7.tcc.br" returnQName="retNS:getLocalizacaoImovelReturn" xmlns:retNS="http://controle.uni7.tcc.br" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:codigoImovel" xmlns:pns="http://controle.uni7.tcc.br" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getValorAluguelImovel" qname="operNS:getValorAluguelImovel" xmlns:operNS="http://controle.uni7.tcc.br" returnQName="retNS:getValorAluguelImovelReturn" xmlns:retNS="http://controle.uni7.tcc.br" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:codigoImovel" xmlns:pns="http://controle.uni7.tcc.br" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getValorImovel" qname="operNS:getValorImovel" xmlns:operNS="http://controle.uni7.tcc.br" returnQName="retNS:getValorImovelReturn" xmlns:retNS="http://controle.uni7.tcc.br" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:codigoImovel" xmlns:pns="http://controle.uni7.tcc.br" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getLocalizacaoImovel getValorImovel getValorAluguelImovel getValorIPTUImovel"/>
+
+  </service>
+</deployment>

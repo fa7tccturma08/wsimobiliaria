@@ -18,7 +18,9 @@ public class ConnectionFactory {
 			String passwd = Constantes.getSenhaMysql();
 
 			String url = "jdbc:mysql://" + server + ":" + port + "/" + database;
+			DriverManager.registerDriver(new com.mysql.jdbc.Driver());	
 			connection = DriverManager.getConnection(url, user, passwd);
+			
 			return connection;
 
 		} catch (SQLException ex) {
